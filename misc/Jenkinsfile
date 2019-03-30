@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v1/', 'LPT-dockerhub') {
+     docker.withRegistry('https://index.docker.io/v1/', 'adepejim') {
        def app = docker.build("jadepeju/LPT-nodejs-demo:${commit_id}", '.').push()
      }
    }
